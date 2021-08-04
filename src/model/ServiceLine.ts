@@ -1,0 +1,52 @@
+
+
+export interface ServiceLine {
+    RequestedBy?: number[];
+    JobServiceAndChargeId: number;
+    JobOperationalProcessFk: number;
+    OperationalProcessName: string;
+    OperationalProcessCode: string;
+    IsCharge: boolean;
+    ParentFk: number | null;
+    Code: string;
+    Name: string;
+    SupplierCode: string;
+    SupplierName: string;
+    EstimatedQuantity: number | null;
+    EstimatedUomCode: string;
+    EstimatedUomName: string;
+    EstimatedUnitCost: number | null;
+    CostCurrencyCode: string;
+    CostCurrencyName: string;
+    CostCurrencyExchangeRate: number;
+    EstimatedTotalCost: number | null;
+    TaxTypeCode: string;
+    TaxTypeName: string;
+    TaxRate: number | null;
+    TaxAmount: string;
+    EstimatedTotalCostIncTax: null | string;
+    ActualTotalCost: number | null;
+    ActualTaxAmount: number | null;
+    ActualCostLocal: null | string;
+    CostVariance: number;
+    ServiceRequestNo: string;
+    StartTime: null;
+    EndTime: null;
+    CompletedTime: null;
+    StatusCode: string;
+    StatusName: string;
+    Rating: null;
+    ServiceStatus: string;
+    Remarks: string;
+    CreatedBy: string;
+    CreatedAt: Date;
+    ModifiedBy: string;
+    ModifiedAt: Date;
+    IsCostDistributed: null;
+    CostSummaryStatus: string;
+    CostSummaryVersion: string;
+    QuotationNumber: string;
+    IsActive: boolean;
+    serviceRequestLink?: string;
+    charges?: ServiceLine[];
+}
